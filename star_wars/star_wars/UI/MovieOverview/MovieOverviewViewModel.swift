@@ -24,6 +24,6 @@ class MovieOverviewViewModel: ObservableObject {
     }
 
     func getMovieTitle(movie: Movie) -> String {
-        "Film \(movie.episodeID): \(movie.title)"
+        "Movie \(movie.episodeID): \(movie.title)"
     }
 }
