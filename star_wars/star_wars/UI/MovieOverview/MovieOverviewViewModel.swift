@@ -11,10 +11,6 @@ class MovieOverviewViewModel: ObservableObject {
         self.service = service
     }
 
-    var title: String {
-        "Film-Übersicht"
-    }
-
     var sortedMovies: [Movie] {
         movies.sorted { a, b in
             a.episodeID < b.episodeID

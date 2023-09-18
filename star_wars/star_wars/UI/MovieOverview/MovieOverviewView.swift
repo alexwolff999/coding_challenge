@@ -3,6 +3,7 @@ import SwiftUI
 struct MovieOverviewView: View {
 
     private let loadingMessage = "The force is loading"
+    private let title = "Movie-overview"
     private let topPadding: CGFloat = 24
     private let horizontalPadding: CGFloat = 16
     private let dividerHeight: CGFloat = 1
@@ -29,7 +30,7 @@ struct MovieOverviewView: View {
                 }
             }
             .padding(.horizontal, horizontalPadding)
-            .navigationTitle(viewModel.title)
+            .navigationTitle(title)
             .navigationBarTitleDisplayMode(.large)
         }
 
