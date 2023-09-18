@@ -1,10 +1,3 @@
-//
-//  star_warsTests.swift
-//  star_warsTests
-//
-//  Created by Alexander Wolff on 18.09.23.
-//
-
 import XCTest
 @testable import star_wars
 

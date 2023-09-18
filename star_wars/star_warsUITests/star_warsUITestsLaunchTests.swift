@@ -1,10 +1,3 @@
-//
-//  star_warsUITestsLaunchTests.swift
-//  star_warsUITests
-//
-//  Created by Alexander Wolff on 18.09.23.
-//
-
 import XCTest
 
 final class star_warsUITestsLaunchTests: XCTestCase {

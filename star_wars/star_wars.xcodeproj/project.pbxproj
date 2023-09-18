@@ -24,9 +24,7 @@
 		47C647FC2AB82E9700001807 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C647FB2AB82E9700001807 /* Dependencies.swift */; };
 		47C647FF2AB8344E00001807 /* StarWarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C647FE2AB8344E00001807 /* StarWarsView.swift */; };
 		47C648022AB83BD300001807 /* MovieDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C648012AB83BD300001807 /* MovieDetailService.swift */; };
-		47C648042AB83C7400001807 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C648032AB83C7400001807 /* Vehicles.swift */; };
 		47C648062AB83C8200001807 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C648052AB83C8200001807 /* Characters.swift */; };
-		47C648082AB8436A00001807 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C648072AB8436A00001807 /* Planet.swift */; };
 		47C6480A2AB8440500001807 /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C648092AB8440500001807 /* MovieDetailRequest.swift */; };
 		47C6480E2AB8493000001807 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6480D2AB8493000001807 /* MovieDetailViewModel.swift */; };
 		47C648102AB8493B00001807 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6480F2AB8493B00001807 /* MovieDetailView.swift */; };
@@ -70,9 +68,7 @@
 		47C647FB2AB82E9700001807 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		47C647FE2AB8344E00001807 /* StarWarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsView.swift; sourceTree = "<group>"; };
 		47C648012AB83BD300001807 /* MovieDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailService.swift; sourceTree = "<group>"; };
-		47C648032AB83C7400001807 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		47C648052AB83C8200001807 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
-		47C648072AB8436A00001807 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		47C648092AB8440500001807 /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
 		47C6480D2AB8493000001807 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		47C6480F2AB8493B00001807 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
@@ -197,9 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				47C647F12AB8212900001807 /* Movies.swift */,
-				47C648032AB83C7400001807 /* Vehicles.swift */,
 				47C648052AB83C8200001807 /* Characters.swift */,
-				47C648072AB8436A00001807 /* Planet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,13 +373,11 @@
 				47C647FC2AB82E9700001807 /* Dependencies.swift in Sources */,
 				47C647BD2AB81D5600001807 /* MainView.swift in Sources */,
 				47C648022AB83BD300001807 /* MovieDetailService.swift in Sources */,
-				47C648082AB8436A00001807 /* Planet.swift in Sources */,
 				47C647F82AB82E2E00001807 /* ServiceError.swift in Sources */,
 				47C647F42AB828B100001807 /* MovieRequest.swift in Sources */,
 				47C647FF2AB8344E00001807 /* StarWarsView.swift in Sources */,
 				47C647EE2AB81F3E00001807 /* MovieService.swift in Sources */,
 				47C6480E2AB8493000001807 /* MovieDetailViewModel.swift in Sources */,
-				47C648042AB83C7400001807 /* Vehicles.swift in Sources */,
 				47C6480A2AB8440500001807 /* MovieDetailRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
