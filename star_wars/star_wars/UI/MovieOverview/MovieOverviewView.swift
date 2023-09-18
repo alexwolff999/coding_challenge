@@ -1,6 +1,12 @@
 import SwiftUI
 
 struct MovieOverviewView: View {
+
+    private let loadingMessage = "The force is loading"
+    private let topPadding: CGFloat = 24
+    private let horizontalPadding: CGFloat = 16
+    private let dividerHeight: CGFloat = 1
+
     @StateObject var viewModel: MovieOverviewViewModel
 
     public init(viewModel: MovieOverviewViewModel) {
@@ -11,50 +17,18 @@ struct MovieOverviewView: View {
         StarWarsView {
             VStack(alignment: .leading) {
                 if viewModel.isLoading {
-                    ProgressView(label: {
-                       Text("The force is loading")
-                            .foregroundColor(.white)
-                            .font(.footnote)
-                    })
-                        .progressViewStyle(.circular)
-                        .tint(.white)
+                    loadingIndicator
                 } else {
                     VStack {
                         ForEach(viewModel.sortedMovies, id: \.episodeID) { movie in
-                            NavigationLink {
-                                MovieDetailView(viewModel: ViewModelDI().getMovieDetailView(movie: movie))
-                            } label: {
-                                VStack {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            HStack {
-                                                Text(viewModel.getMovieTitle(movie: movie))
-                                                    .font(.headline)
-                                                    .foregroundColor(.white)
-                                                Spacer()
-                                                Text(movie.releaseDate)
-                                                    .font(.headline)
-                                                    .foregroundColor(.white)
-                                            }
-                                        }
-
-                                        Image(systemName: "chevron.right")
-                                            .renderingMode(.template)
-                                            .foregroundColor(.white)
-                                    }
-                                    Rectangle()
-                                        .fill(.white)
-                                        .frame(height: 1)
-                                        .edgesIgnoringSafeArea(.horizontal)
-                                }
-                            }
+                            movieRow(movie: movie)
                         }
                         Spacer()
                     }
-                    .padding(.top, 24)
+                    .padding(.top, topPadding)
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, horizontalPadding)
             .navigationTitle(viewModel.title)
             .navigationBarTitleDisplayMode(.large)
         }
@@ -65,5 +39,46 @@ struct MovieOverviewView: View {
             }
 
         }
+    }
+
+    @ViewBuilder
+    func movieRow(movie: Movie) -> some View {
+        NavigationLink {
+            MovieDetailView(viewModel: ViewModelDI().getMovieDetailView(movie: movie))
+        } label: {
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(viewModel.getMovieTitle(movie: movie))
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Spacer()
+                            Text(movie.releaseDate)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                    }
+
+                    Image(systemName: "chevron.right")
+                        .renderingMode(.template)
+                        .foregroundColor(.white)
+                }
+                Rectangle()
+                    .fill(.white)
+                    .frame(height: dividerHeight)
+                    .edgesIgnoringSafeArea(.horizontal)
+            }
+        }
+    }
+
+    var loadingIndicator: some View {
+        ProgressView(label: {
+            Text(loadingMessage)
+                .foregroundColor(.white)
+                .font(.footnote)
+        })
+        .progressViewStyle(.circular)
+        .tint(.white)
     }
 }
