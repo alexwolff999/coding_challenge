@@ -122,7 +122,6 @@
 		47C647BB2AB81D5600001807 /* star_wars */ = {
 			isa = PBXGroup;
 			children = (
-				47C648142AB9972F00001807 /* Dependencies */,
 				47C6480B2AB8490900001807 /* UI */,
 				47C647EC2AB81F0E00001807 /* Network */,
 				47C647BC2AB81D5600001807 /* MainView.swift */,
@@ -210,6 +209,7 @@
 		47C6480B2AB8490900001807 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				47C648142AB9972F00001807 /* Dependencies */,
 				47C6480C2AB8492400001807 /* MovieDetail */,
 				47C647E62AB81D9000001807 /* MovieOverview */,
 			);
